@@ -5,8 +5,6 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddlewareDemo", "MiddlewareDemo\MiddlewareDemo.csproj", "{483D5BA7-8954-4A64-B864-9D385CE19676}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilterDemo", "FilterDemo\FilterDemo.csproj", "{315DF51C-E71C-47EB-8F9F-FEACD9FE49AE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterDemoWebAPI", "FilterDemoWebAPI\FilterDemoWebAPI.csproj", "{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{483D5BA7-8954-4A64-B864-9D385CE19676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483D5BA7-8954-4A64-B864-9D385CE19676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483D5BA7-8954-4A64-B864-9D385CE19676}.Release|Any CPU.Build.0 = Release|Any CPU
-		{315DF51C-E71C-47EB-8F9F-FEACD9FE49AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{315DF51C-E71C-47EB-8F9F-FEACD9FE49AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{315DF51C-E71C-47EB-8F9F-FEACD9FE49AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{315DF51C-E71C-47EB-8F9F-FEACD9FE49AE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
