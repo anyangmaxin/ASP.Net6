@@ -23,11 +23,11 @@ var app = builder.Build();
 //});
 
 //使用use加入中间件
-app.Use(async (context, next) =>
-{
-    await File.WriteAllTextAsync("a.txt", $"{DateTime.Now.ToString()}");
-    await next.Invoke();
-});
+//app.Use(async (context, next) =>
+//{
+//    await File.WriteAllTextAsync("a.txt", $"{DateTime.Now.ToString()}");
+//    await next.Invoke();
+//});
 #endregion
 
 #region 第二种测试中间件
@@ -62,7 +62,7 @@ app.Use(async (context, next) =>
 
 
 #region 第三种中间件
-//app.UseTestMiddleware();
+app.UseTestMiddleware();
 #endregion
 
 #endregion
