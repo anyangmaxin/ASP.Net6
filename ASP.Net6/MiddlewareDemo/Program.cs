@@ -1,3 +1,5 @@
+ï»¿using MiddlewareDemo;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -20,42 +22,68 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-//Â·ÓÉÖĞ¼ä¼ş
+//è·¯ç”±ä¸­é—´ä»¶
 app.UseRouting();
 
-//ÊÚÈ¨ÖĞ¼ä¼ş
+//æˆæƒä¸­é—´ä»¶
 app.UseAuthorization();
 
 app.MapRazorPages();
 
 /**
- * MapÊÇ½Ó´ı¿ÍÈË(ÇëÇó)µÄ×÷ÓÃ£º¸æËß¶ÔÓ¦µÄÇëÇó£¬ÎÒÕâÀï¿ÉÒÔ´¦Àí Use ÊÇÖĞ¼ä¼ş£¬Ã¿Ò»¸öMap¾ÍÊÇÒ»µÀÃÅµÄÊØÃÅÔ±£¬ÃÅºóÃæµÄ¹¦ÄÜÓÉ¸÷¸ö²»Í¬µÄÖĞ¼ä¼ş×é³É
+ * Mapæ˜¯æ¥å¾…å®¢äºº(è¯·æ±‚)çš„ä½œç”¨ï¼šå‘Šè¯‰å¯¹åº”çš„è¯·æ±‚ï¼Œæˆ‘è¿™é‡Œå¯ä»¥å¤„ç† Use æ˜¯ä¸­é—´ä»¶ï¼Œæ¯ä¸€ä¸ªMapå°±æ˜¯ä¸€é“é—¨çš„å®ˆé—¨å‘˜ï¼Œé—¨åé¢çš„åŠŸèƒ½ç”±å„ä¸ªä¸åŒçš„ä¸­é—´ä»¶ç»„æˆ
  */
 
-#region ÖĞ¼ä¼ş²âÊÔ
+#region ä¸­é—´ä»¶æµ‹è¯•
 
-#region µÚÒ»¸ö¼òµ¥µÄÖĞ¼ä¼ş
-//Ö»ÄÜ´¦ÀílocalhostµÄÇëÇó
+#region ç¬¬ä¸€ä¸ªç®€å•çš„ä¸­é—´ä»¶
+//åªèƒ½å¤„ç†localhostçš„è¯·æ±‚
 //app.MapGet("/", () => "Hello World");
+
+//app.Run(async context =>
+//{
+//    await context.Response.WriteAsync("Hello World \r\n");
+//});
 #endregion
 
-#region µÚ¶şÖÖ²âÊÔÖĞ¼ä¼ş
+#region ç¬¬äºŒç§æµ‹è¯•ä¸­é—´ä»¶
 //app.Map("/test", pilebuilder =>
 //{
 //    pilebuilder.Use(async (context, next) =>
 //    {
-//        //Ç°´úÂë
-//        await context.Response.WriteAsync("Hello World 1 \r\n");
+//        //å‰ä»£ç 
+//        await context.Response.WriteAsync("Hello World 1 Start \r\n");
 //        //await next.Invoke();
 //        await next();
-//        //ºó´úÂë
+//        //åä»£ç 
 //        await context.Response.WriteAsync("Hellow World 1 End \r\n");
+//    });
+
+//    pilebuilder.Use(async (context, next) =>
+//    {
+//        //å‰ä»£ç 
+//        await context.Response.WriteAsync("Hello World 2 Start \r\n");
+//        //await next.Invoke();
+//        await next.Invoke();
+//        //åä»£ç 
+//        await context.Response.WriteAsync("Hellow World 2 End \r\n");
+//    });
+//    pilebuilder.Run(async context =>
+//    {
+//        //ç«¯ç‚¹ï¼ˆç»ˆç‚¹ï¼‰ä¸­é—´ä»¶
+//        await context.Response.WriteAsync("+Hellp MiddleWare \r\n");
 //    });
 //});
 #endregion
 
 
+#region ç¬¬ä¸‰ç§ä¸­é—´ä»¶
+//app.UseTestMiddleware();
 #endregion
+
+#endregion
+
+
 
 app.Run();
 
