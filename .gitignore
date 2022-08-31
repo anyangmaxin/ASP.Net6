@@ -6,3 +6,6 @@
 /ASP.Net6/MiddlewareDemo/obj
 ## /ASP.Net6/.vs/ASP.Net6/config/applicationhost.config
 /ASP.Net6/.vs/
+.vs/
+obj/
+bin/
