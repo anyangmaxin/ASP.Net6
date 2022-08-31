@@ -17,9 +17,16 @@ var app = builder.Build();
 //只能处理localhost的请求
 //app.MapGet("/", () => "Hello World");
 
-app.Run(async context =>
+//app.Run(async context =>
+//{
+//    await context.Response.WriteAsync("Hello World \r\n");
+//});
+
+//使用use加入中间件
+app.Use(async (context, next) =>
 {
-    await context.Response.WriteAsync("Hello World \r\n");
+    await File.WriteAllTextAsync("a.txt", $"{DateTime.Now.ToString()}");
+    await next.Invoke();
 });
 #endregion
 
