@@ -2,7 +2,7 @@
 
 namespace FilterDemoWebAPI
 {
-    public class MyActionFilter1 : IAsyncActionFilter
+    public class MyActionFilter2 : IAsyncActionFilter
     {
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {

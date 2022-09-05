@@ -15,10 +15,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.Configure<MvcOptions>(async opt =>
 {
     //注意注册顺序 ，否则记录异常日志有问题。
-    opt.Filters.Add<MyExceptionFilter>();
-    opt.Filters.Add<LogExceptionFilter>();
+    //opt.Filters.Add<MyExceptionFilter>();
+    //opt.Filters.Add<LogExceptionFilter>();
     opt.Filters.Add<MyActionFilter1>();
-  
+    opt.Filters.Add<MyActionFilter2>();
+
 });
 
 var app = builder.Build();

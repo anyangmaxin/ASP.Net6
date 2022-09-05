@@ -77,3 +77,76 @@ System.IO.IOException: The process cannot access the file 'D:\MyCode\GitHub\ASPN
 --- End of stack trace from previous location ---
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
 
+MyActionFilter1 前代码 
+
+MyActionFilter1 发生了异常  System.IO.IOException: The process cannot access the file 'D:\MyCode\GitHub\ASPNet6\ASP.Net6\ASP.Net6\FilterDemoWebAPI\error.text' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.AsyncStreamWriter(String path, Encoding encoding, Boolean append)
+   at System.IO.File.AppendAllTextAsync(String path, String contents, Encoding encoding, CancellationToken cancellationToken)
+   at System.IO.File.AppendAllTextAsync(String path, String contents, CancellationToken cancellationToken)
+   at FilterDemoWebAPI.MyActionFilter2.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in D:\MyCode\GitHub\ASPNet6\ASP.Net6\ASP.Net6\FilterDemoWebAPI\MyFilterAction2.cs:line 11
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+
+System.IO.IOException: The process cannot access the file 'D:\MyCode\GitHub\ASPNet6\ASP.Net6\ASP.Net6\FilterDemoWebAPI\error.text' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.AsyncStreamWriter(String path, Encoding encoding, Boolean append)
+   at System.IO.File.AppendAllTextAsync(String path, String contents, Encoding encoding, CancellationToken cancellationToken)
+   at System.IO.File.AppendAllTextAsync(String path, String contents, CancellationToken cancellationToken)
+   at FilterDemoWebAPI.MyActionFilter1.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in D:\MyCode\GitHub\ASPNet6\ASP.Net6\ASP.Net6\FilterDemoWebAPI\MyFilterAction1.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+MyActionFilter1 前代码 
+
+MyActionFilter1 发生了异常  System.IO.IOException: The process cannot access the file 'D:\MyCode\GitHub\ASPNet6\ASP.Net6\ASP.Net6\FilterDemoWebAPI\error.text' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.AsyncStreamWriter(String path, Encoding encoding, Boolean append)
+   at System.IO.File.AppendAllTextAsync(String path, String contents, Encoding encoding, CancellationToken cancellationToken)
+   at System.IO.File.AppendAllTextAsync(String path, String contents, CancellationToken cancellationToken)
+   at FilterDemoWebAPI.MyActionFilter2.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in D:\MyCode\GitHub\ASPNet6\ASP.Net6\ASP.Net6\FilterDemoWebAPI\MyFilterAction2.cs:line 11
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+
+MyActionFilter1 后代码 
+
+MyActionFilter1 前代码 
+
+MyActionFilter1 发生了异常  System.IO.IOException: The process cannot access the file 'D:\MyCode\GitHub\ASPNet6\ASP.Net6\ASP.Net6\FilterDemoWebAPI\error.text' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.AsyncStreamWriter(String path, Encoding encoding, Boolean append)
+   at System.IO.File.AppendAllTextAsync(String path, String contents, Encoding encoding, CancellationToken cancellationToken)
+   at System.IO.File.AppendAllTextAsync(String path, String contents, CancellationToken cancellationToken)
+   at FilterDemoWebAPI.MyActionFilter2.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in D:\MyCode\GitHub\ASPNet6\ASP.Net6\ASP.Net6\FilterDemoWebAPI\MyFilterAction2.cs:line 11
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+
+MyActionFilter1 前代码 
+
+MyActionFilter2 前代码 
+
+MyActionFilter2 执行成功  
+
+MyActionFilter2 后代码 
+
+MyActionFilter1 执行成功  
+
+MyActionFilter1 后代码 
+
