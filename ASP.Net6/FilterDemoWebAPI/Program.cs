@@ -1,5 +1,6 @@
 using FilterDemoWebAPI;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.Configure<MvcOptions>(async opt =>
     //注意注册顺序 ，否则记录异常日志有问题。
     opt.Filters.Add<MyExceptionFilter>();
     opt.Filters.Add<LogExceptionFilter>();
+    opt.Filters.Add<MyActionFilter1>();
   
 });
 
