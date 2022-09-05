@@ -1,3 +1,6 @@
+using FilterDemoWebAPI;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,15 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//注入自定义的Filter
+builder.Services.Configure<MvcOptions>(async opt =>
+{
+    //注意注册顺序 ，否则记录异常日志有问题。
+    opt.Filters.Add<MyExceptionFilter>();
+    opt.Filters.Add<LogExceptionFilter>();
+  
+});
 
 var app = builder.Build();
 
