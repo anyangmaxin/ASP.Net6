@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddlewareDemo", "MiddlewareDemo\MiddlewareDemo.csproj", "{483D5BA7-8954-4A64-B864-9D385CE19676}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterDemoWebAPI", "FilterDemoWebAPI\FilterDemoWebAPI.csproj", "{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilterDemoWebAPI", "FilterDemoWebAPI\FilterDemoWebAPI.csproj", "{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{B213DA83-F571-45A6-9AB3-DAE150308BE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31EB9FA9-7EE4-4E20-9C2D-72323BA1FEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B213DA83-F571-45A6-9AB3-DAE150308BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B213DA83-F571-45A6-9AB3-DAE150308BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B213DA83-F571-45A6-9AB3-DAE150308BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B213DA83-F571-45A6-9AB3-DAE150308BE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
